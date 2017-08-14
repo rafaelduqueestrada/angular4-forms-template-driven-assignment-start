@@ -35,9 +35,7 @@
                   class="form-control"
                   [ngModel]="defaultSubscription"
                   name="subscription">
-            <option value="basic">Basic</option>
-            <option value="advanced">Advanced</option>
-            <option value="pro">Pro</option>
+            <option *ngFor="let subscription of subscriptions" [value]="subscription">{{ subscription }}</option>
           </select>
         </div>
         <div class="form-group">
